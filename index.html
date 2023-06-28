@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blower</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="shortcut icon" href="character-main.png" type="image/x-icon">
+</head>
+<body>
+    <script>
+        // JavaScript code to detect if the user is on a mobile device
+        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+        // If the user is on a mobile device, show a message to play in a desktop browser
+        if (isMobile) {
+            document.write('<div style="text-align: center; padding: 20px;">Please open this game in a desktop browser to play.</div>');
+        }
+    </script>
+
+    <div id="game-container">
+        <img id="character" src="character-main.png" alt="Main Character">
+        <div id="item-container"></div>
+    </div>
+
+    <div id="ui-container">
+        <div id="score">Score: 0</div>
+        <div id="time">Time: 0</div>
+        <div class="button-container">
+            <button id="start-button">Start Game</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

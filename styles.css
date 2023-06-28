@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f3f3;
+}
+
+#game-container {
+    width: 80vw;
+    max-width: 500px;
+    height: 80vw;
+    max-height: 500px;
+    position: relative;
+    border: 2px solid black;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+#character {
+    width: 10%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.item {
+    width: 6%;
+    padding-bottom: 6%;
+    background-color: #e74c3c; /* Red color for balloons */
+    position: absolute;
+    border-radius: 50%;
+}
+
+#ui-container {
+    text-align: center;
+}
+
+#start-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#score,
+#time {
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.button-container button {
+    margin: 0 5px;
+}
+
+.button-container button:hover,
+#start-button:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 600px) {
+    #game-container,
+    #character,
+    .item {
+        width: 90%;
+        padding-bottom: 90%;
+    }
+}
