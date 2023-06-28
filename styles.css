@@ -4,23 +4,23 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* Change height to min-height for smaller screens */
     background-color: #f3f3f3;
 }
 
 #game-container {
-    width: 80vw;
+    width: 90vw; /* Increase width for smaller screens */
     max-width: 500px;
-    height: 80vw;
+    height: 90vw; /* Increase height for smaller screens */
     max-height: 500px;
     position: relative;
     border: 2px solid black;
     margin-bottom: 10px;
-    overflow: hidden;
+    overflow: hidden; /* Prevent character from going outside */
 }
 
 #character {
-    width: 10%;
+    width: 50%; /* Adjust size for smaller screens */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -48,14 +48,14 @@ body {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; /* Add smooth transition on button hover */
 }
 
 #score,
 #time {
     font-size: 16px;
     margin-top: 10px;
-    font-weight: bold;
+    font-weight: bold; /* Make the score and time stand out */
 }
 
 .button-container {
@@ -71,7 +71,7 @@ body {
 
 .button-container button:hover,
 #start-button:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Increase button size on hover */
 }
 
 @media screen and (max-width: 600px) {
@@ -80,5 +80,14 @@ body {
     .item {
         width: 90%;
         padding-bottom: 90%;
+    }
+    
+    #character {
+        width: 70%;
+    }
+    
+    #score,
+    #time {
+        font-size: 14px;
     }
 }
